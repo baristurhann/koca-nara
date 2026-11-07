@@ -225,20 +225,32 @@
         }
 
         .photo-card {
+            position: relative;
             background-color: var(--card-bg);
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            cursor: pointer;
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-style: italic;
+            height: 320px;
             border: 1px solid var(--border-color);
         }
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+        .photo-caption {
+            position: absolute;
+            left: 0; right: 0; bottom: 0;
+            padding: 28px 14px 13px;
+            color: #fff;
+            font-style: normal;
+            font-size: 0.95rem;
+            background: linear-gradient(transparent, rgba(0,0,0,.72));
+        }
+        @media(max-width: 600px) { .photo-card { height: 280px; } }
 
         .photo-card:hover {
             transform: translateY(-5px);
@@ -512,9 +524,11 @@
             <div class="album-section">
                 <div class="album-title">Gençlik Yılları</div>
                 <div class="photo-grid">
-                    <div class="photo-card">Gençlik Yılları - Kare 1</div>
-                    <div class="photo-card">Gençlik Yılları - Kare 2</div>
-                    <div class="photo-card">Gençlik Yılları - Kare 3</div>
+                    <div class="photo-card"><img src="images/genclik-01.png" alt="Abdurrahim Turhan'ın gençlik yıllarından portresi" loading="lazy"></div>
+                    <div class="photo-card"><img src="images/genclik-02.png" alt="Abdurrahim Turhan'ın gençlik yıllarında spor yaptığı dönemden grup fotoğrafı" loading="lazy"></div>
+                    <div class="photo-card"><img src="images/genclik-03.png" alt="Abdurrahim Turhan'ın açık havada çekilmiş gençlik fotoğrafı" loading="lazy"></div>
+                    <div class="photo-card"><img src="images/genclik-04.png" alt="Abdurrahim Turhan'ın okul yıllarından fotoğrafı" loading="lazy"></div>
+                    <div class="photo-card"><img src="images/genclik-05.png" alt="Abdurrahim Turhan'ın bir dostuyla birlikte çekilmiş fotoğrafı" loading="lazy"></div>
                 </div>
             </div>
 
