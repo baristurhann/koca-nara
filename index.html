@@ -187,6 +187,31 @@
             font-size: 1.05rem;
         }
 
+        .photo-card {
+            padding: 0;
+            height: 260px;
+            display: block;
+            background: transparent;
+        }
+        .photo-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .biography-portrait {
+            max-width: 360px;
+            margin: 0 auto 34px;
+            text-align: center;
+        }
+        .biography-portrait img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,.12);
+        }
+
         /* Gallery */
         .gallery-header {
             text-align: center;
@@ -225,32 +250,20 @@
         }
 
         .photo-card {
-            position: relative;
             background-color: var(--card-bg);
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             transition: transform 0.3s ease;
-            height: 320px;
+            cursor: pointer;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-style: italic;
             border: 1px solid var(--border-color);
         }
-        .photo-card img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: cover;
-            filter: grayscale(100%);
-        }
-        .photo-caption {
-            position: absolute;
-            left: 0; right: 0; bottom: 0;
-            padding: 28px 14px 13px;
-            color: #fff;
-            font-style: normal;
-            font-size: 0.95rem;
-            background: linear-gradient(transparent, rgba(0,0,0,.72));
-        }
-        @media(max-width: 600px) { .photo-card { height: 280px; } }
 
         .photo-card:hover {
             transform: translateY(-5px);
@@ -472,6 +485,10 @@
                 <p style="margin-top: 10px;">Bu sayfa, bir insanın hayatını yalnızca tarihler ve unvanlarla değil; ailesine, öğrencilerine, dostlarına ve yaşadığı yerlere bıraktığı izlerle hatırlamak için hazırlandı. Onu tanıyan herkesin hatırası bu hikâyenin bir parçası.</p>
             </div>
 
+            <div class="biography-portrait">
+                <img src="images/abdurrahim-turhan-portre.jpg" alt="Abdurrahim Turhan">
+            </div>
+
             <div class="bio-content">
                 <h2>1. Başlangıç: Kılan'da başlayan bir hayat</h2>
                 <p>Abdurrahim Turhan, 1943 yılında Niğde'nin Ulukışla ilçesine bağlı Kılan köyünde dünyaya geldi. On kardeşin bir arada yaşadığı, imkânların sınırlı olduğu bir aile ortamında büyüdü. Çocukluk yılları, hayatın zorluklarını erken yaşlarda tanıdığı ve kişiliğinin şekillendiği bir dönem oldu.</p>
@@ -518,27 +535,19 @@
         <section id="fotograflar" class="section">
             <div class="gallery-header">
                 <h2>Fotoğraf Albümü</h2>
-                <p>Her fotoğraf, geçmişten bugüne uzanan küçük bir kapı. Gençlik yıllarından kalan kareleri bu albümde bir araya getirdik.</p>
+                <p> </p>
             </div>
 
             <div class="album-section">
                 <div class="album-title">Gençlik Yılları</div>
                 <div class="photo-grid">
-                    <div class="photo-card"><img src="images/genclik-01.png" alt="Abdurrahim Turhan'ın gençlik yıllarından portresi" loading="lazy"></div>
-                    <div class="photo-card"><img src="images/genclik-02.png" alt="Abdurrahim Turhan'ın gençlik yıllarında spor yaptığı dönemden grup fotoğrafı" loading="lazy"></div>
-                    <div class="photo-card"><img src="images/genclik-03.png" alt="Abdurrahim Turhan'ın açık havada çekilmiş gençlik fotoğrafı" loading="lazy"></div>
-                    <div class="photo-card"><img src="images/genclik-04.png" alt="Abdurrahim Turhan'ın okul yıllarından fotoğrafı" loading="lazy"></div>
-                    <div class="photo-card"><img src="images/genclik-05.png" alt="Abdurrahim Turhan'ın bir dostuyla birlikte çekilmiş fotoğrafı" loading="lazy"></div>
-                </div>
+                    <div class="photo-card"><img src="images/genclik-01.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/genclik-02.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/genclik-03.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/genclik-04.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/genclik-05.jpg" alt=""></div>\n                </div>
             </div>
 
             <div class="album-section">
                 <div class="album-title">Kılan Köyü</div>
                 <div class="photo-grid">
-                    <div class="photo-card">Kılan Köyü - Kare 1</div>
-                    <div class="photo-card">Kılan Köyü - Kare 2</div>
-                    <div class="photo-card">Kılan Köyü - Kare 3</div>
-                </div>
+                    <div class="photo-card"><img src="images/kilan-koyu-01.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/kilan-koyu-02.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/kilan-koyu-03.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/kilan-koyu-04.jpg" alt=""></div>\n                    <div class="photo-card"><img src="images/kilan-koyu-05.jpg" alt=""></div>\n                </div>
             </div>
         </section>
 
